@@ -9,7 +9,7 @@ const cep = document.querySelector("#cep");
     mode: 'cors',
     cache: 'default'
   }
-  buscar.addEventListener("click", function(){
+    buscar.addEventListener("click", function(){
     fetch('https://viacep.com.br/ws/${ cep.value }/json/',opcoes)
     .then(response => {response.json()
     .then(data => {
@@ -18,7 +18,7 @@ const cep = document.querySelector("#cep");
      document.querySelector("#bairro").value = data['bairro'];
      document.querySelector("#rua").value = data['logradouro'];
      
-       })
+      })
     })
   });
 }
