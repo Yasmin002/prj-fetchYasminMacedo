@@ -10,7 +10,7 @@ const cep = document.querySelector("#cep");
     cache: 'default'
   }
   buscar.addEventListener("click", function(){
-    fetch('https://viacep.com.br/ws/${cep.value}/json/',opcoes)
+    fetch('https://viacep.com.br/ws/${ cep.value }/json/',opcoes)
     .then(response => {response.json()
     .then(data => {
      document.querySelector("#estado").value = data['uf'];
